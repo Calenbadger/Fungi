@@ -1,9 +1,5 @@
-## Phoma/Unknown Fungal Genomics Full Workflow
-### Pacbio Data
-### Genome Assembly
-### Genome Annotation
-### Phylogenomics
-#### BUSCO Phylogenomics 
+# Phylogenomics Workflow
+## BUSCO Phylogenomics 
 
 __36 Genomes__ from https://genome.jgi.doe.gov/portal/pages/dynamicOrganismDownload.jsf?organism=pleosporales 
 `Alternaria_alternata_MPI_PUGE_AT_0064_Assembly,
