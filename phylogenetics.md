@@ -17,3 +17,5 @@ Private information: See Google Docs
 See notebook or Evernote
 ## PCR Amplification
 See notebook or Evernote
+## Sanger Sequencing
+## BLAST
