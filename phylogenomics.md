@@ -1,6 +1,6 @@
 # Phylogenomics Workflow
 ## BUSCO Phylogenomics 
-
+#### Data Download/Generation
 __36 Genomes__ from https://genome.jgi.doe.gov/portal/pages/dynamicOrganismDownload.jsf?organism=pleosporales 
 `Alternaria_alternata_MPI_PUGE_AT_0064_Assembly,
 Alternaria_alternata_SRC1lrK2f_Assembly,
@@ -49,6 +49,7 @@ __Running BUSCO on the 36 genomes__
     echo Finished $file
     done
 
+#### Command Workflow
 __Reading BUSCO directories and generating species-based and gene-based fasta files__  
 For protein: `python3 geneset_busco.py --dir /share/rwmwork/cbadger/A.rabiei/Phylogenomics/Busco/Output --key run_ --species /share/rwmwork/cbadger/A.rabiei/Phylogenomics/Busco/Protspecies --prot /share/rwmwork/cbadger/A.rabiei/Phylogenomics/Busco/Prots`  
 For nucleotide: `python3 geneset_busco.py --dir /share/rwmwork/cbadger/A.rabiei/Phylogenomics/Busco/Output --key run_ --species /share/rwmwork/cbadger/A.rabiei/Phylogenomics/Busco/Nucspecies --prot /share/rwmwork/cbadger/A.rabiei/Phylogenomics/Busco/Nucs`
