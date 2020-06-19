@@ -1,1 +1,2 @@
-# Genome Assembly
+# Genome Assembly Workflow
+## Canu
