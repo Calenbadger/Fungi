@@ -108,6 +108,7 @@ __ACCESSING RNASEQ DATA__
 * `vdb-config --interactive`
 * Enable remote access [X]
 * `nohup prefetch SRR8267448 &`
+* `nohup fastq-dump SRR8267448.sra &`
 
 To Download Directly to Computer (wget not permitted):  
 7. Go to Run Browser: https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=run_browser  
