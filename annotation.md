@@ -122,3 +122,6 @@ Sorting contigs:
 Softmasking genome: (Softmasked 3.02% of genome)  
 `nohup funannotate mask -i Genome/Phoma.genome.sorted.fa --cpus 12 -o Genome/Phoma.genome.sorted.masked.fa &`
 
+Moved sorted softmasked genome from Run1 to Run2  
+Training step:  
+`nohup funannotate train -i Run2/Phoma.genome.sorted.masked.fa -o Run2 --single Evidence/SRR8267448/SRR8267448.fastq --jaccard_clip --species "Phoma species" --cpus 12 &`
