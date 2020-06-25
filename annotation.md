@@ -78,7 +78,7 @@ Sorting contigs:
 `nohup funannotate sort -i Genome/Arabiei40x.contigs.fasta -b contig -o Genome/Phoma.genome.sorted.fa &`  
 
 Softmasking genome: (Softmasked 3.02% of genome)  
-`nohup funannotate mask -i Genome/Phoma.genome.sorted.fa --cpus 12 -o Genome/Phoma.genome.sorted.masked.fa &`  
+`nohup funannotate mask -i Genome/Phoma.genome.sorted.fa --cpus 12 -o Genome/Phoma.genome.sorted.masked.fa &`   
 
 Gene prediction:  
 `nohup funannotate predict -i Run1/Phoma.genome.sorted.masked.fa -o Run1 --species "Phoma species" --protein_evidence $FUNANNOTATE_DB/uniprot_sprot.fasta --cpus 12 &`  
@@ -124,4 +124,23 @@ Softmasking genome: (Softmasked 3.02% of genome)
 
 Moved sorted softmasked genome from Run1 to Run2  
 Training step:  
-`nohup funannotate train -i Run2/Phoma.genome.sorted.masked.fa -o Run2 --single Evidence/SRR8267448/SRR8267448.fastq --jaccard_clip --species "Phoma species" --cpus 12 &`
+`nohup funannotate train -i Run2/Phoma.genome.sorted.masked.fa -o Run2 --single Evidence/SRR8267448/SRR8267448.fastq --jaccard_clip --species "Phoma species" --cpus 12 &`  
+
+Error:  
+
+    Traceback (most recent call last):
+      File "/home/cbadger/.conda/envs/fun/bin/funannotate", line 660, in <module>
+      File "/home/cbadger/.conda/envs/fun/bin/funannotate", line 650, in main
+      File "/home/cbadger/.conda/envs/fun/lib/python2.7/site-packages/funannotate/train.py", line 914, in main
+      File "/home/cbadger/.conda/envs/fun/lib/python2.7/site-packages/funannotate/train.py", line 87, in runNormalization
+      File "/home/cbadger/.conda/envs/fun/lib/python2.7/site-packages/funannotate/library.py", line 654, in runSubprocess2
+      File "/home/cbadger/.conda/envs/fun/lib/python2.7/subprocess.py", line 394, in __init__
+      File "/home/cbadger/.conda/envs/fun/lib/python2.7/subprocess.py", line 1046, in _execute_child
+      File "/home/cbadger/.conda/envs/fun/lib/python2.7/pickle.py", line 1388, in loads
+      File "/home/cbadger/.conda/envs/fun/lib/python2.7/pickle.py", line 864, in load
+      File "/home/cbadger/.conda/envs/fun/lib/python2.7/pickle.py", line 977, in load_string
+    LookupError: unknown encoding: string-escape
+
+NOT COMPLETE  
+Gene prediction:  
+`nohup funannotate predict -i Run2/Phoma.genome.sorted.masked.fa -o Run2 --species "Phoma species" --protein_evidence $FUNANNOTATE_DB/uniprot_sprot.fasta --cpus 12 &`  
